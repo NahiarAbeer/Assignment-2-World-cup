@@ -83,11 +83,23 @@ main .down .left button {
     background-color: #fff;
     height: 50px;
     border-radius: 9px;
+    transition: var(--time);
+}
+main .down .left button:hover{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid gold;
+    transition: var(--time);
+    scale: 101%;
 }
 
 #active {
     background: #DD0000;
     color: #fff;
+}
+#active:hover {
+    scale: 101%;
+    border: none;
 }
 
 .down .right {
@@ -179,8 +191,11 @@ footer ul li {
     main .up .txt {
         min-width: 40%;
     }
+    main .up .txt h1{
+        font-size: 24px;
+    }
     main .up .marcelo {
-        width: 40%;
+        width: 50%;
     }
     main .up .marcelo img{
         width: 100%;
@@ -216,6 +231,8 @@ footer ul li {
     main .down .left {
         width: 100%;
         height: auto;
+        margin-bottom: 30px;
+        padding: 0;
         background: none;
         display: grid;
         grid-template-columns: repeat(3,1fr);
