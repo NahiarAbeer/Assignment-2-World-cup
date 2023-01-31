@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --time:all 0.3s ease-in-out;
+    --y:-5px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    max-height: 250vh;
+}
+
+main {
+    margin: 20px;
+    height: auto;
+}
+
+main .up .top {
+    display: flex;
+    background: #000;
+    border-radius: 20px;
+    justify-content: space-around;
+    place-items: center;
+}
+
+main .up .top .txt {
+    padding: 40px;
+    color: white;
+    width: 25%;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+main .up .top .txt a {
+    background: #DD0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+main .up .top .txt h1 {
+    font-size: 53px;
+}
+
+.main .up .top .marcelo {
+    width: 100%;
+
+}
+
+.main .up .top .marcelo img {
+
+    display: flex;
+
+}
+
+main .down {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 100px 0;
+}
+
+main .down .left {
+    margin-right: 20px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: 15vw;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 9px;
+    height: 250px;
+}
+
+main .down .left button {
+    cursor: pointer;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    height: 50px;
+    border-radius: 9px;
+}
+
+#active {
+    background: #DD0000;
+    color: #fff;
+}
+
+.down .right {
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 30px;
+}
+
+.down .right .cards {
+    width: 1fr;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    transition: var(--time);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.down .right .cards:hover {
+    transition: var(--time);
+    transform: translateY(var(--y));
+    scale: 101%;
+}
+
+
+.down .right .cards img {
+    width: 100%;
+    border-radius: 9px;
+    justify-self: center;
+}
+
+.down .right .cards .t {
+    margin-top: 20px;
+    padding: 4px;
+}
+.down .right .cards .t a{
+    color:black;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 4px ;
+    border: 1px solid #000;
+}
+
+
+.down .right .cards .ico:first-child {
+    margin: 0;
+}
+
+.down .right .cards .ico {
+    margin: 0 15px;
+    color: grey;
+}
+main .but {
+    display: none;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background: #161616;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 50vh;
+}
+footer hr {
+    color: rgba(255, 255, 255, 0.171) ;
+    width: 80%;
+}
+footer ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer ul li {
+    list-style: none;
+    margin: 10px 12px;
+}
+@media screen and (min-width: 560px) and (max-width: 980px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    main .up .txt {
+        min-width: 40%;
+    }
+    main .up .marcelo {
+        width: 40%;
+    }
+    main .up .marcelo img{
+        width: 100%;
+    }
+    main .down {
+        flex-direction: column;
+        
+    }
+    main .down .right {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    main .down .right .hide{
+        display: none;
+    }
+    main .but {
+        display: flex;
+        justify-content: center;
+    }
+    main .but a{
+        text-decoration: none;
+        color: #fff;
+        background: #DD0000;
+        padding: 8px;
+        border-radius: 3px;
+        transition: var(--time);
+    }
+    main .but a:hover{
+        transform: translateY(-5px);
+        scale: 110%;
+        transition: var(--time);
+    }
+    main .down .left {
+        width: 100%;
+        height: auto;
+        background: none;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    main .down .left button {
+        border: 1px solid #E8E8E8;
+    }
+}
+@media screen and (max-width: 559px) {
+    main .up .top {
+        display: flex;
+        flex-direction: column;
+    }
+    main .up .top .txt{
+        padding: 10px;
+        margin: 0;
+        width: 75%;
+        text-align: center;
+    }
+    main .up .top .txt h1 {
+        font-size: 22px;
+        
+    }
+    main .up .marcelo {
+        width: 100%;
+        
+    }
+    main .up .marcelo img{
+        width: 100%;
+    }
+    main .down {
+        margin-top: 50px;
+        flex-direction: column;
+        
+    }
+    main .down .right {
+        grid-template-columns: auto;
+    }
+    
+    main .down .left {
+        width: 100%;
+        padding: 0;
+        height: auto;
+        background: none;
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    main .down .left button {
+        border: 1px solid #E8E8E8;
+    }
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
