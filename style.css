@@ -40,12 +40,17 @@ main .up .top .txt a {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 8px;
+    transition: var(--time);
 }
 
 main .up .top .txt h1 {
     font-size: 53px;
 }
-
+main .up .top .txt a:hover {
+    
+    background-color: #475DFF;
+    transition: var(--time);
+}
 .main .up .top .marcelo {
     width: 100%;
 
@@ -283,9 +288,11 @@ footer ul li {
         grid-template-rows: repeat(3,1fr);
         grid-template-columns: auto;
         gap: 20px;
+        margin: 20px 0;
     }
     main .down .left button {
         border: 1px solid #E8E8E8;
+        margin: 0px;
     }
     footer ul {
         display: flex;
